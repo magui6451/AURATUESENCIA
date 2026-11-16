@@ -4,13 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Aura Tu Esencia: servicio de peinados para mujeres. Ondas, trenzados y planchado en General Cabrera.">
     <title>Aura Tu Esencia</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-    <header>
+    <div class="barra-progreso" aria-hidden="true"></div>
+
+    <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio" class="menu-logo">Aura</a>
+        <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#promociones">Promociones</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio">
+        <div class="burbuja burbuja-1" aria-hidden="true"></div>
+        <div class="burbuja burbuja-2" aria-hidden="true"></div>
 
         <img src="logo aura tu esencia.jpeg" alt="Logo Aura Tu Esencia" class="logo">
 
@@ -18,9 +32,16 @@
 
         <p class="subtitulo">Tu esencia, tu estilo</p>
 
+        <div class="hero-botones">
+            <a href="https://wa.me/5493544611341" class="boton boton-principal" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+            <a href="#promociones" class="boton boton-secundario">Ver promociones</a>
+        </div>
+
+        <a href="#presentacion" class="flecha-abajo" aria-label="Bajar a la información">&#8964;</a>
     </header>
+
     <main>
-        <section class="presentacion">
+        <section class="presentacion reveal" id="presentacion">
 
             <h2>Sobre nuestro emprendimiento</h2>
 
@@ -31,7 +52,8 @@
             </p>
 
         </section>
-        <section class="informacion">
+
+        <section class="informacion reveal">
 
             <div class="datos">
 
@@ -42,6 +64,8 @@
                     <p>
                         General Cabrera, Laprida 1186
                     </p>
+
+                    <a class="enlace-mapa" href="https://www.google.com/maps/search/?api=1&amp;query=General+Cabrera+Laprida+1186" target="_blank" rel="noopener">Ver en el mapa →</a>
 
                 </div>
 
@@ -59,27 +83,35 @@
             </div>
 
         </section>
-        <section class="horarios">
+
+        <section class="horarios reveal" id="horarios">
 
             <h2>Días de atención</h2>
 
             <p>Lunes a sábados</p>
 
-            <h2>Horarios de atención</h2>
-
-            <p>09:30 a 11:30</p>
-
-            <p>15:30 a 21:30</p>
+            <div class="bloques-horario">
+                <div class="bloque">
+                    <span class="bloque-icono" aria-hidden="true">🌤️</span>
+                    <h3>Horarios de atención</h3>
+                    <p>09:30 a 11:30</p>
+                </div>
+                <div class="bloque">
+                    <span class="bloque-icono" aria-hidden="true">🌙</span>
+                    <p>15:30 a 21:30</p>
+                </div>
+            </div>
 
         </section>
-        <section class="servicios">
+
+        <section class="servicios reveal" id="servicios">
 
             <h2>Productos y servicios</h2>
 
             <div class="tarjetas">
 
                 <div class="tarjeta">
-
+                    <span class="numero" aria-hidden="true">01</span>
                     <h3>Ondas</h3>
 
                     <p>
@@ -90,7 +122,7 @@
 
 
                 <div class="tarjeta">
-
+                    <span class="numero" aria-hidden="true">02</span>
                     <h3>Trenzado</h3>
 
                     <p>
@@ -101,7 +133,7 @@
 
 
                 <div class="tarjeta">
-
+                    <span class="numero" aria-hidden="true">03</span>
                     <h3>Planchado</h3>
 
                     <p>
@@ -113,7 +145,8 @@
             </div>
 
         </section>
-        <section class="promociones">
+
+        <section class="promociones reveal" id="promociones">
 
             <h2>Promociones</h2>
 
@@ -121,10 +154,10 @@
             <div class="promo">
 
                 <h3>Planchado</h3>
-                <img src="WhatsApp Image 2026-11-15 at 8.07.01 PM (1).jpeg"
+                <img src="WhatsApp Image 2026-11-15 at 8.07.01 PM (1).jpeg" loading="lazy"
                     alt="imagen de una persona con el pelo planchado hasta la mitad y la otra mitad no">
 
-                <p>$8.000</p>
+                <p class="precio">$8.000</p>
 
             </div>
 
@@ -132,10 +165,10 @@
             <div class="promo">
 
                 <h3>Trenzado hasta donde quiera la clienta</h3>
-                <img src="trenzado y planchado.jpeg"
+                <img src="trenzado y planchado.jpeg" loading="lazy"
                     alt="imagen de una una persona con el pelo planchado y trenzado hasta donde decida">
 
-                <p>$9.000</p>
+                <p class="precio">$9.000</p>
 
             </div>
 
@@ -143,10 +176,9 @@
             <div class="promo">
 
                 <h3>Trenzado de todo el cabello</h3>
-                <img src="trenzado completo.jpeg" alt="un trenzado en todo el cabello">
+                <img src="trenzado completo.jpeg" loading="lazy" alt="un trenzado en todo el cabello">
 
-
-                <p>$10.000</p>
+                <p class="precio">$10.000</p>
 
             </div>
 
@@ -154,9 +186,9 @@
             <div class="promo">
 
                 <h3>Trenzado + ondas</h3>
-                <img src="trenzado y ondas.jpeg" alt="Trenzado + ondas">
+                <img src="trenzado y ondas.jpeg" loading="lazy" alt="Trenzado + ondas">
 
-                <p>$10.000</p>
+                <p class="precio">$10.000</p>
 
             </div>
 
@@ -166,7 +198,32 @@
             </p>
 
         </section>
-        <section class="contacto">
+
+        <section class="por-que reveal">
+
+            <h2>¿Por qué elegirnos?</h2>
+
+            <div class="razones">
+                <div class="razon">
+                    <span aria-hidden="true">💜</span>
+                    <h3>Sentirte cómoda</h3>
+                    <p>Pensado para que cada clienta se sienta cómoda y elija el estilo que más le guste.</p>
+                </div>
+                <div class="razon">
+                    <span aria-hidden="true">🎨</span>
+                    <h3>Trabajo personalizado</h3>
+                    <p>Trenzados personalizados según el estilo que elijas.</p>
+                </div>
+                <div class="razon">
+                    <span aria-hidden="true">🫧</span>
+                    <h3>Lavado y secado</h3>
+                    <p>En todos los precios puede estar incluido el lavado y secado.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="contacto reveal" id="contacto">
 
             <h2>Contacto y redes sociales</h2>
 
@@ -180,9 +237,15 @@
                 +54 9 3544 61-1341
             </p>
 
+            <div class="contacto-botones">
+                <a href="https://wa.me/5493544611341" class="boton boton-principal" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://instagram.com/auratu_esencia02" class="boton boton-secundario" target="_blank" rel="noopener">Instagram</a>
+            </div>
+
         </section>
 
     </main>
+
     <footer>
 
         <p>
@@ -195,6 +258,14 @@
 
     </footer>
 
+    <button class="volver-arriba" aria-label="Volver arriba">&#8593;</button>
+
+    <dialog class="visor" id="visor">
+        <img src="" alt="">
+        <button class="cerrar" aria-label="Cerrar">×</button>
+    </dialog>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
